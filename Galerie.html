@@ -4,43 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Galerie</title>
 </head>
 <body>
-    <div class="container">
-        <div class='caroussel_diapo'>
-            <input checked id="carou_un" name="rotation" type="radio">
-            <label for="carou_un"></label>
-            <input id="carou_deux" name="rotation" type="radio">
-            <label for="carou_deux"></label>
-            <input id="carou_trois" name="rotation" type="radio">
-            <label for="carou_trois"></label>
-            <input id="carou_quatre" name="rotation" type="radio">
-            <label for="carou_quatre"></label>
-            <input id="carou_cinq" name="rotation" type="radio">
-            <label for="carou_cinq"></label>
-            <input id="carou_six" name="rotation" type="radio">
-            <label for="carou_six"></label>
-            <input id="carou_sept" name="rotation" type="radio">
-            <label for="carou_sept"></label>
-            <input id="carou_huit" name="rotation" type="radio">
-            <label for="carou_huit"></label>
-            <div class="contenu_carou">
-            <div class="caroussel">
-            <img src="./img/1.webp" alt>
-            <img src="./img/2.webp" alt>
-            <img src="./img/3.webp" alt>
-            <img src="./img/4.jpg" alt>
-            <img src="./img/5.jpg" alt>
-            <img src="./img/5.webp" alt>
-            <img src="./img/6.webp" alt>
-            <img src="./img/8.jpg" alt>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./Home.html"></a>
             </div>
+
+            <ul class="lstLink">
+                <li><a href="./Galerie.html">Galerie</a></li>
+                <li><a href="./Tarif&prestation.html">Tarif & Préstation</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+            <div class="toggleBtn">
+                <i class="fa-solid fa-bars"></i>
             </div>
+        </nav>
+        <div class="dropdownMenu">
+            <ul class="lstLink">
+                <li><a href="./Galerie.html">Galerie</a></li>
+                <li><a href="./Tarif&prestation.html">Tarif & Préstation</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
         </div>
-    </div>	
-         
+    </header>
+        <h1 id="titreTheme" class="titreCategorie">Catégorie : theme</h1>
+    <main class="mainContainer">
+
+        <section class="mainCategorie">
+            <nav>
+                <ul class="lstTheme">
+                    <li><a href="#" id="">Mariage</a></li>
+                    <li><a href="#" id="">Grosse</a></li>
+                    <li><a href="#" id="">BéBé</a></li>
+                    <li><a href="#" id="">Famille</a></li>
+                    <li><a href="#" id="">Bapteme</a></li>
+                    <li><a href="#" id="">Couple</a></li>
+                    <li><a href="#" id="">Tous les thémes</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class='caroussel_diapo'>
+                    <input checked id="carou_un" name="rotation" type="radio">
+                    <label for="carou_un"></label>
+                    <input id="carou_deux" name="rotation" type="radio">
+                    <label for="carou_deux"></label>
+                    <input id="carou_trois" name="rotation" type="radio">
+                    <label for="carou_trois"></label>
+                    <input id="carou_quatre" name="rotation" type="radio">
+                    <label for="carou_quatre"></label>
+                    <input id="carou_cinq" name="rotation" type="radio">
+                    <label for="carou_cinq"></label>
+                    <input id="carou_six" name="rotation" type="radio">
+                    <label for="carou_six"></label>
+                    <input id="carou_sept" name="rotation" type="radio">
+                    <label for="carou_sept"></label>
+                    <input id="carou_huit" name="rotation" type="radio">
+                    <label for="carou_huit"></label>
+                    <div class="contenu_carou">
+                    <div class="caroussel">
+                    <img src="./img/1.webp" alt>
+                    <img src="./img/2.webp" alt>
+                    <img src="./img/3.webp" alt>
+                    <img src="./img/4.jpg" alt>
+                    <img src="./img/5.jpg" alt>
+                    <img src="./img/5.webp" alt>
+                    <img src="./img/6.webp" alt>
+                    <img src="./img/8.jpg" alt>
+                    </div>
+                    </div>
+                </div>
+            </div>	
+        </section>
+    </main>
+    
     <script src="./JavaScript/main.js"></script>
 </body>
 </html>

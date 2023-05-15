@@ -1,33 +1,222 @@
-html,body{
-    background-color: blueviolet;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 *{
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
-body{
+html{
+    background-color: blueviolet;
+    /* height: 100vh;
+    font-family: 'open Sans','sans-serif' */
+
+}
+html, body{
+    height: 100vh;
+    font-family: 'open Sans','sans-serif';
     background-image: url('../img/1.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    color:#fff;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size:1rem
+}
+a:hover{
+    color: yellow;
 }
 
-header img{
-    transform: scale(0.5);
-    position:absolute;
-    top:-47px;
-    left: -109px;
-    margin:0;
+/* ----------  Header ------------------- */
+
+header {
+    
+    position: relative;
+    padding: 0 1.2rem 0 0;
+    /* background-color: rgba(0, 0, 0, 0.703) */
+
 }
 
 header nav{
-    position:relative;
+    width: 100%;
+    /* max-width: 1200px; */
+    height: 60px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    height: 100%;
+    overflow: hidden;
+}
+.logo a{
+    display: inline-block;
+    height: 100%;
+    width:120px;
+    background-image: url('../img/logo_400x200.png');
+    background-position: center;
+    background-size: cover;
+    
+    transition: scale ease-in 0.2s;
+    
+}
+.logo a:hover{
+    scale:1.1;
+
+}
+nav .lstLink{
+    display: flex;
+    gap:6rem;
 }
 
+.lstLink a {
+    font-size: 1.2rem;
+
+}
+nav .toggleBtn{
+    color:#fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: none;
+}
+/* ----------  main - Home ------------------- */
+.titre{
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.titre h1 , .titre p{
+
+    font-size: 5rem;
+    font-weight: 700;
+
+}
+
+
+
+/* ----------  Responsive Design ------------------- */
+
+header > .dropdownMenu{
+    display: none;
+}
+
+.dropdownMenu{
+    position:absolute;
+    right:2rem;
+    top:60px;
+    width: 300px;
+    height: 0;
+    border-radius: 18px;
+    background-color: rgba(245, 245, 245, 0.555);
+    backdrop-filter: blur(18px);
+    overflow: hidden;
+    transition: height ease-in-out 0.2s;
+}
+.dropdownMenu.open{
+    height: 150px;
+}
+.dropdownMenu li{
+    display: flex;
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.dropdownMenu .lstLink a{
+    /* color:black; */
+    font-weight: 700;
+}
+.titreCategorie{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+/* ----------  categorie  --------------------------- */
+
+.mainContainer{
+    
+    height: calc(100vh - 155px);
+    display:flex;
+    align-items: center;
+
+}
+
+.mainCategorie{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+/* ------------------- Nav menu iteme ---------------- */
+
+.mainCategorie .lstTheme{
+
+    padding-left: 1.2rem;
+    margin-left: 1.5rem;
+   width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    border-radius: 18px;
+    background-color: rgba(245, 245, 245, 0.555);
+    backdrop-filter: blur(18px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.mainCategorie .lstTheme li a{
+
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* ----------  Responsive Design ------------------- */
+
+@media(max-width:990px) {
+    nav .lstLink{
+        display: none;
+    }
+    nav .toggleBtn {
+        display: block;
+    }
+    header > .dropdownMenu{
+        display: block;
+    }
+    .titre h1 , .titre p{
+        font-size: 3.3rem;
+    }
+}
+@media(max-width:580px){
+
+    .dropdownMenu{
+        left:2rem;
+        width: unset;
+    }
+    .titre h1 , .titre p{
+        font-size: 2.5rem;
+    }
+}
+
+
 .container{
-    display: flex
+    display: flex;
+    background-color: rosybrown;
+    grid-column-start: 7;
+    /* grid-column-end: 12; */
 
 }
 
