@@ -4,7 +4,6 @@
     padding: 0
 }
 html{
-    background-color: blueviolet;
     /* height: 100vh;
     font-family: 'open Sans','sans-serif' */
 
@@ -12,7 +11,7 @@ html{
 html, body{
     height: 100vh;
     font-family: 'open Sans','sans-serif';
-    background-image: url('../img/1.webp');
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -179,6 +178,260 @@ header > .dropdownMenu{
 
     font-size: 1.2rem;
 }
+/*  -------------- Contact ------------------ */
+
+.containerContact{
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formulair{
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background-color: rgba(245, 245, 245, 0.555);
+    backdrop-filter: blur(18px);
+}
+.formulair h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.formulair .formBox{
+    position:relative;
+    width: 350px;
+    margin-top: 21px;
+    margin-bottom: 31px;
+    border-bottom: 3px solid #fff;
+}
+.formBox label{
+    position:absolute;
+    left:0;
+    top: 21px;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition:.5s;
+}
+.formBox input:focus ~ label,
+.formBox input:valid ~ label{
+
+    top:-10px;
+    font-size: 1.1rem;
+}
+
+.formBox input{
+    width: calc(100% - 42px);
+    height: 50px;
+    background-color: transparent;
+    color:black;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+
+}
+.formBox i{
+    position:absolute;
+    right:8px;
+    top:20px;
+    font-size: 1.4rem;
+
+}
+.formulair button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 18px;
+    color:black;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.formulair button:hover{
+
+    background-color: #299595c2;
+    background-image: linear-gradient(62deg, #edf2f2 50%, #eae6ea 100%);
+    
+}
+.formBox2{
+ 
+
+}
+.formulair textarea{
+    outline:none;
+
+    resize: none;
+    padding:15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border-color: #fff;
+    font-weight: 300;
+    
+    
+    
+}
+
+/* -------------- Tarif & Prestation ----------------- */
+
+.TarifContenaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px);
+    transform-style: preserve-3d;
+}
+.TarifContenaire input {
+    display: none;
+}
+.cardBox label{
+    position: absolute;
+    width: 300px;
+    right: 0;
+    left: 0;
+    margin:auto;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+.cardBox{
+    position: relative;
+    transform-style: preserve-3d;
+    transform:translate(-70px , -174px);
+}
+.TarifContenaire .card {
+
+    position: relative;
+    width: 100%;
+    height: 450px ;
+    border-radius: 18px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background-color: rgba(245, 245, 245, 0.339);
+    backdrop-filter: blur(18px);
+
+}
+.card .logoCard{
+
+    position:absolute;
+    border: solid 6px #fff;
+    padding: 15px;
+    border-radius: 50% ;
+    top:0;
+    left:50%;
+    transform:translate(-50%, -85%);
+}
+.card .logoCard i{
+    font-size: 4.4rem;
+}
+.card h3{
+    padding-top: 76px;
+    font-size: 2.2rem;
+    text-align: center;
+
+}
+.nbPerson{
+    font-style: italic;
+    text-align: center;
+}
+.cardPrix{
+    position:absolute;
+    width: 100%;
+    height: 55px;
+    padding: 15px 15px;
+    top:50%;
+    bottom: 0;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    border:solid 3px #fff;
+    border-left: none;
+    border-right: none;
+}
+.cardPrix span{
+    font-weight: 700;
+}
+.cardDescrip{
+    margin-top: calc(50% + 24px);
+    padding-left: 24px;
+    font-size: 1.1rem;
+
+}
+.cardDescrip p{
+    margin-bottom: 5px;
+}
+.cardDescrip span{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#id1:checked~.cardBox #slid3,
+#id2:checked~.cardBox #slid4,
+#id3:checked~.cardBox #slid5,
+#id4:checked~.cardBox #slid6,
+#id5:checked~.cardBox #slid1,
+#id6:checked~.cardBox #slid2{
+
+    transform: translate3d(-165% , 0 , -250px);
+    /* background-color: blue; */
+}
+#id1:checked~.cardBox #slid2,
+#id2:checked~.cardBox #slid3,
+#id3:checked~.cardBox #slid4,
+#id4:checked~.cardBox #slid5,
+#id5:checked~.cardBox #slid6,
+#id6:checked~.cardBox #slid1{
+
+    transform: translate3d(-59% , 0 , -120px);
+    /* background-color: red; */
+}
+#id1:checked~.cardBox #slid1,
+#id2:checked~.cardBox #slid2,
+#id3:checked~.cardBox #slid3,
+#id4:checked~.cardBox #slid4,
+#id5:checked~.cardBox #slid5,
+#id6:checked~.cardBox #slid6{
+
+    transform: translate3d(0, 0 , 0);
+    /* background-color:black */
+}
+#id1:checked~.cardBox #slid6,
+#id2:checked~.cardBox #slid1,
+#id3:checked~.cardBox #slid2,
+#id4:checked~.cardBox #slid3,
+#id5:checked~.cardBox #slid4,
+#id6:checked~.cardBox #slid5{
+
+    transform: translate3d(56% , 0 , -119px);
+    /* background-color:yellow */
+}
+#id1:checked~.cardBox #slid5,
+#id2:checked~.cardBox #slid6,
+#id3:checked~.cardBox #slid1,
+#id4:checked~.cardBox #slid2,
+#id5:checked~.cardBox #slid3,
+#id6:checked~.cardBox #slid4{
+
+    transform: translate3d(103% , 0 , -120px);
+    /* background-color:green */
+}
+#id1:checked~.cardBox #slid4,
+#id2:checked~.cardBox #slid5,
+#id3:checked~.cardBox #slid6,
+#id4:checked~.cardBox #slid1,
+#id5:checked~.cardBox #slid2,
+#id6:checked~.cardBox #slid3{
+
+    transform: translate3d(-113% , 0 , -249px);
+    /* background-color:orange */
+}
 
 
 
@@ -214,7 +467,9 @@ header > .dropdownMenu{
 
 .container{
     display: flex;
-    background-color: rosybrown;
+    background-color: rgba(245, 245, 245, 0.555);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
     grid-column-start: 4;
     grid-column-end: 11;
 

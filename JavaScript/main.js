@@ -14,47 +14,50 @@ btnToggle.addEventListener('click',function(){
 
 // =============   Swiper ==========
 
-const swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-  });
 
-  const lstBtnMenu = document.querySelectorAll(".lstTheme li a");
-  const titreCat = document.querySelector('.titreCategorie span');
-  const SwiperLoad = document.querySelector('#swiperLoader');
+  if(Swiper){
+    const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+      });
 
-  lstBtnMenu.forEach((element)=>{
-    element.addEventListener('click', function(event){
-        event.preventDefault();
-        let categorie = element.textContent;
-        titreCat.textContent = categorie;
+    const lstBtnMenu = document.querySelectorAll(".lstTheme li a");
+    const titreCat = document.querySelector('.titreCategorie span');
+    const SwiperLoad = document.querySelector('#swiperLoader');
 
-        loadListImg(categorie);
+    lstBtnMenu.forEach((element)=>{
+        element.addEventListener('click', function(event){
+            event.preventDefault();
+            let categorie = element.textContent;
+            titreCat.textContent = categorie;
 
+            loadListImg(categorie);
+
+        })
     })
-  })
 
-  function loadListImg(cat){
-    
+    function loadListImg(cat){
+        
+        
+    }
 
-  }
+    function ShowSwiper(lstImage){
 
-  function ShowSwiper(lstImage){
-
-    if(!lstImage){return;}
-    SwiperLoad.innerHTML = '';
-    lstImage.forEach(function(path){
-        SwiperLoad.innerHTML += `<div class="swiper-slide"><img src="${path}" /></div>`;
-    })
+        if(!lstImage){return;}
+        SwiperLoad.innerHTML = '';
+        lstImage.forEach(function(path){
+            SwiperLoad.innerHTML += `<div class="swiper-slide"><img src="${path}" /></div>`;
+        })
+    }
   }
 
 
