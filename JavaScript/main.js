@@ -14,21 +14,28 @@ btnToggle.addEventListener('click',function(){
 
 // =============   Swiper ==========
 
+  if( typeof Swiper !== 'undefined'){
 
-  if(Swiper){
-    const swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-      });
+    function creatSwiper(){
+        const swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            },
+          });
+
+    }
+
+     creatSwiper();
+     loadListImg("");
+
 
     const lstBtnMenu = document.querySelectorAll(".lstTheme li a");
     const titreCat = document.querySelector('.titreCategorie span');
@@ -47,19 +54,47 @@ btnToggle.addEventListener('click',function(){
 
     function loadListImg(cat){
         
-        
-    }
+        fetch('../imgLoad2.json')
+        .then(response =>{
+            return response.json()
+        })
+        .then(data => { 
 
+            if(data[cat]){
+
+                ShowSwiper(data[cat])
+            
+            } else {
+                let slt = []
+                
+                for (const key in data) {   
+                    slt.push( ...data[key]);    
+                }
+
+                // melage le table
+                let rdSlt = [];
+                while(slt.length){
+                    let nb = slt.length;
+                    let rand = Math.floor( Math.random() * nb)
+                     rdSlt.push( slt[rand]);
+                     slt.splice(rand,1);
+                }
+                // =========
+
+                ShowSwiper(rdSlt);
+            }
+        });
+    }
     function ShowSwiper(lstImage){
 
         if(!lstImage){return;}
-        SwiperLoad.innerHTML = '';
+        let str ='';
         lstImage.forEach(function(path){
-            SwiperLoad.innerHTML += `<div class="swiper-slide"><img src="${path}" /></div>`;
+            str += `<div class="swiper-slide"><img src="${path}" /></div>`;
         })
+        SwiperLoad.innerHTML = str;
+        creatSwiper();
     }
   }
-
-
 
 //  =====================================

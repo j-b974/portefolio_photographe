@@ -3,14 +3,10 @@
     margin: 0;
     padding: 0
 }
-html{
-    /* height: 100vh;
-    font-family: 'open Sans','sans-serif' */
-
-}
 html, body{
     height: 100vh;
     font-family: 'open Sans','sans-serif';
+    background-color: black;
     background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -261,10 +257,6 @@ header > .dropdownMenu{
     background-color: #299595c2;
     background-image: linear-gradient(62deg, #edf2f2 50%, #eae6ea 100%);
     
-}
-.formBox2{
- 
-
 }
 .formulair textarea{
     outline:none;
