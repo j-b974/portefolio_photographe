@@ -1,4 +1,5 @@
-console.log("connecté!!!!");
+// =========== nav barre =========
+
 const btnToggle = document.querySelector('.toggleBtn');
 const icon = document.querySelector('.toggleBtn i ');
 const menuDrop = document.querySelector('.dropdownMenu');
@@ -10,9 +11,9 @@ btnToggle.addEventListener('click',function(){
 
     icon.className = isOpen ? 'fa-solid fa-xmark':'fa-solid fa-bars';
 })
+//  ===============================
 
-
-// =============   Swiper ==========
+// ==========   Swiper & filtre par theme =======
 
   if( typeof Swiper !== 'undefined'){
 
@@ -21,7 +22,12 @@ btnToggle.addEventListener('click',function(){
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
+            // direction: "vertical",
             slidesPerView: "auto",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
             coverflowEffect: {
               rotate: 50,
               stretch: 0,
@@ -47,14 +53,19 @@ btnToggle.addEventListener('click',function(){
             let categorie = element.textContent;
             titreCat.textContent = categorie;
 
-            loadListImg(categorie);
+            loadListImg(+event.target.getAttribute('themeId'));
 
         })
     })
 
-    function loadListImg(cat){
+    function loadListImg(id){
+
+        const lstCat = ['Mariage','Grossesse','BéBé','Famille','Bapteme','Couple'];
+        
+        let cat = lstCat[id-1] ?? null ;
         
         fetch('../imgLoad2.json')
+
         .then(response =>{
             return response.json()
         })
@@ -66,12 +77,14 @@ btnToggle.addEventListener('click',function(){
             
             } else {
                 let slt = []
-                
+
+                // fusion objet en 1 tableau 
                 for (const key in data) {   
                     slt.push( ...data[key]);    
                 }
 
-                // melage le table
+                // melange la table
+
                 let rdSlt = [];
                 while(slt.length){
                     let nb = slt.length;
