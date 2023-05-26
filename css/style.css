@@ -13,6 +13,11 @@ html, body{
     background-size: cover;
     color:#fff;
 }
+.contenair{
+    display: flex;
+    flex-direction: column;
+}
+
 li{
     list-style: none;
 }
@@ -113,6 +118,7 @@ header > .dropdownMenu{
     border-radius: 18px;
     background-color: rgba(245, 245, 245, 0.555);
     backdrop-filter: blur(18px);
+    z-index: 500;
     overflow: hidden;
     transition: height ease-in-out 0.2s;
 }
