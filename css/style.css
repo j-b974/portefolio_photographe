@@ -285,7 +285,8 @@ header > .dropdownMenu{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 60px);
+    transform: translateY(-25%);
     transform-style: preserve-3d;
 }
 .TarifContenaire input {
@@ -304,7 +305,7 @@ header > .dropdownMenu{
 .cardBox{
     position: relative;
     transform-style: preserve-3d;
-    transform:translate(-70px , -174px);
+
 }
 .TarifContenaire .card {
 
@@ -438,7 +439,7 @@ header > .dropdownMenu{
 
 /* ----------  Responsive Design ------------------- */
 
-@media(max-width:990px) {
+@media screen and (max-width:990px) {
     nav .lstLink{
         display: none;
     }
@@ -452,7 +453,7 @@ header > .dropdownMenu{
         font-size: 3.3rem;
     }
 }
-@media(max-width:580px){
+@media screen and (max-width:580px){
 
     .dropdownMenu{
         left:2rem;
@@ -460,6 +461,28 @@ header > .dropdownMenu{
     }
     .titre h1 , .titre p{
         font-size: 2.5rem;
+    }
+
+    /* ========= resposive tarif& Prestation ======== */
+    .TarifContenaire{
+        display: block;
+        transform: unset;
+    }
+    .TarifContenaire .card{
+        width: 100%;
+        margin-top:25px;
+        margin-left:25px;
+    }
+
+    .cardBox{
+        
+        width: 300px;
+    }
+    .cardBox label{
+        position: relative;
+    }
+    .logoCard{
+        display: none;
     }
 }
 
