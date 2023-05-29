@@ -33,7 +33,7 @@ a:hover{
 /* ----------  Header ------------------- */
 
 header {
-    
+    z-index: 500;
     position: relative;
     padding: 0 1.2rem 0 0;
     /* background-color: rgba(0, 0, 0, 0.703) */
@@ -465,13 +465,13 @@ header > .dropdownMenu{
 
     /* ========= resposive tarif& Prestation ======== */
     .TarifContenaire{
-        display: block;
+        display: grid;
         transform: unset;
+        justify-content: center;
     }
     .TarifContenaire .card{
         width: 100%;
         margin-top:25px;
-        margin-left:25px;
     }
 
     .cardBox{
@@ -485,6 +485,34 @@ header > .dropdownMenu{
         display: none;
     }
 }
+@media screen and (max-width:1220px){
+
+    /* ========= resposive tarif& Prestation ======== */
+
+    .cardBox label{
+        width: 225px;
+    }
+
+    .card{
+        font-size: 1.1rem;
+    }
+    .card .logoCard i{
+        font-size: 2.2rem;
+    }
+    .cardDescrip{
+        font-size: 1rem;
+    }
+    .cardPrix{
+        top:39%;
+    }
+    .nbPerson{
+        font-size: 1rem;
+    }
+    .card h3{
+        font-size: 1.1rem;
+    }
+
+}
 
 
 .container{
@@ -497,7 +525,7 @@ header > .dropdownMenu{
 
 }
 
-/* /* ======================  Swiper ================  */
+ /* ======================  Swiper ================  */
 
     .swiper {
       width: 100%;
