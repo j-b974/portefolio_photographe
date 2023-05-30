@@ -14,7 +14,7 @@
         "..\\img\\BéBé\\bebe4.jpg",
         "..\\img\\BéBé\\bebe5.jpg",
         "..\\img\\BéBé\\bebe6.jpg",
-        "..\\img\\BéBé\\bebe4.jpg",
+        "..\\img\\BéBé\\bebe7.jpg",
         "..\\img\\BéBé\\bebe2.webp",
         "..\\img\\BéBé\\bebe8.webp"
     ],
@@ -33,19 +33,40 @@
     "Famille":[
         "..\\img\\Famille\\famille1.jpg",
         "..\\img\\Famille\\famille2.jpg",
-        "..\\img\\Famille\\famille3.jpg"
+        "..\\img\\Famille\\famille3.jpg",
+        "..\\img\\Famille\\famille4.jpg",
+        "..\\img\\Famille\\famille5.jpg",
+        "..\\img\\Famille\\famille6.jpg",
+        "..\\img\\Famille\\famille7.jpg"
+
     ],
 
     "Grossesse":[
         "..\\img\\Grossesse\\grossesse.jpg",
         "..\\img\\Grossesse\\grossesse2.jpg",
-        "..\\img\\Grossesse\\grossesse3.jpg"
+        "..\\img\\Grossesse\\grossesse3.jpg",
+        "..\\img\\Grossesse\\grossesse4.jpg",
+        "..\\img\\Grossesse\\grossesse5.jpg",
+        "..\\img\\Grossesse\\grossesse6.jpg"
+
     ],
 
     "Mariage":[
         "..\\img\\Mariage\\mariage1.jpg",
         "..\\img\\Mariage\\mariage2.jpg",
-        "..\\img\\Mariage\\mariage3.jpg"
+        "..\\img\\Mariage\\mariage3.jpg",
+        "..\\img\\Mariage\\mariage4.jpg",
+        "..\\img\\Mariage\\mariage5.jpg",
+        "..\\img\\Mariage\\mariage6.jpg"
+    ],
+    "Portait":[
+        "..\\img\\Portait\\portait1.jpg",
+        "..\\img\\Portait\\portait2.jpg",
+        "..\\img\\Portait\\portait3.jpg",
+        "..\\img\\Portait\\portait4.jpg",
+        "..\\img\\Portait\\portait5.jpg",
+        "..\\img\\Portait\\portait6.jpg"
+    
     ]
 
 }

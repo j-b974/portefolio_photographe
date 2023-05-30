@@ -17,12 +17,22 @@ btnToggle.addEventListener('click',function(){
 
   if( typeof Swiper !== 'undefined'){
 
+    window.addEventListener("resize", function(){
+        console.log(window.innerWidth);
+        creatSwiper();
+    });
+
+    function getDirection(){
+
+        return window.innerWidth <= 580 ? 'vertical' : 'horizontal';
+    }
+
     function creatSwiper(){
         const swiper = new Swiper(".mySwiper", {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
-            // direction: "vertical",
+            direction: getDirection() ,
             slidesPerView: "auto",
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -60,7 +70,7 @@ btnToggle.addEventListener('click',function(){
 
     function loadListImg(id){
 
-        const lstCat = ['Mariage','Grossesse','BéBé','Famille','Bapteme','Couple'];
+        const lstCat = ['Mariage','Grossesse','BéBé','Famille','Bapteme','Couple','Portait'];
         
         let cat = lstCat[id-1] ?? null ;
         
