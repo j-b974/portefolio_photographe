@@ -27,7 +27,7 @@ a{
     font-size:1rem
 }
 a:hover{
-    color: yellow;
+    color: white
 }
 
 /* ----------  Header ------------------- */
@@ -143,8 +143,56 @@ header > .dropdownMenu{
     margin-top: 3rem;
     font-size: 2.5rem;
 }
+/* ----------- reseau social ---------------- */
 
-/* ----------  categorie  --------------------------- */
+    .lstLinkSocial{
+        position:fixed;
+        width: 28px;
+        bottom: 8%;
+        right: 0;
+    }
+    .lstLinkSocial li{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        background-color: transparent;
+        transition: background 0.2s ease;
+        border-radius: 50%;
+    }
+
+    .lstLinkSocial i{
+
+        font-size: .8rem;
+    }
+
+    .lstLinkSocial .twitter:hover{
+
+        /* border: solid 1px #eae6ea ; */
+        border-radius: 50%;
+        background-color: #2ea9e9;
+
+        
+    }
+    .lstLinkSocial .facebook:hover{
+        border-radius: 50%;
+        background-color: #597ac7;
+        
+    }
+    .lstLinkSocial .linkedin:hover{
+        background-color: #1781b3;
+       
+    }
+
+    .lstLinkSocial .tiktok:hover , .lstLinkSocial .tiktok:hover a{
+
+        background-color: white;
+        color:black;
+    }
+
+
+
+/* ----------  categorie  ------------------- */
 .container{
     display: flex;
     background-color: rgba(245, 245, 245, 0.555);
