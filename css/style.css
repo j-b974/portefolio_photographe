@@ -118,6 +118,7 @@ header > .dropdownMenu{
     border-radius: 18px;
     background-color: rgba(245, 245, 245, 0.555);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     z-index: 500;
     overflow: hidden;
     transition: height ease-in-out 0.2s;
@@ -149,6 +150,7 @@ header > .dropdownMenu{
     background-color: rgba(245, 245, 245, 0.555);
     border-radius: 18px;
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     grid-column-start: 4;
     grid-column-end: 11;
 }
@@ -181,6 +183,7 @@ header > .dropdownMenu{
     border-radius: 18px;
     background-color: rgba(245, 245, 245, 0.555);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     display: flex;
     flex-direction: column;
@@ -235,6 +238,7 @@ header > .dropdownMenu{
     border-radius: 18px;
     background-color: rgba(245, 245, 245, 0.555);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 .formulair h2{
     font-size: 2.5rem;
@@ -356,6 +360,7 @@ header > .dropdownMenu{
     transform-style: preserve-3d;
     background-color: rgba(245, 245, 245, 0.339);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
 }
 .card .logoCard{
@@ -486,6 +491,9 @@ header > .dropdownMenu{
         font-size: 3.3rem;
     }
     /* ================= responsive Galery ======= */
+    .mainContainer{
+        display: block;
+    }
     .titreCategorie{
         font-size: 1.8rem;
         margin-top:1.1rem;
